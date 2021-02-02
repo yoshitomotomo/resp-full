@@ -1,0 +1,132 @@
+@charset "UTF-8";
+/* 共通部分 */
+html{
+    /* 設定した文字サイズを反映させる */
+    font-size: 100%;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: #ffffff;
+}
+a{
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+
+/* HEADER */
+.logo {
+    width: 210px;
+    margin-top: 14px;
+}
+/* ナビゲーションメニュー */
+.main-nav{
+    display: flex;
+    font-size: 1.25rem;
+    /* 大文字変換 */
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+.main-nav li{
+    margin-left: 35px;
+}
+.main-nav a{
+    color: #b09761;
+}
+.main-nav a:hover {
+    color: firebrick;
+}
+
+/* ロゴとナビゲーションメニュの横並び */
+.page-header {
+    display: flex;
+    /* 両端に割り振り */
+    justify-content: space-between;
+}
+
+/* コンテンツの最大幅表示 */
+.wrapper {
+    max-width: 1100px;
+    /* 中央配置 */
+    margin: 0 auto;
+    /* スマホ用余白指定 */
+    padding: 0 4%;
+}
+
+/* HOME */
+/* 画面中央と余白の指定 */
+.home-content {
+    text-align: center;
+    margin-top: 10%;
+}
+/* pタグへのフォントサイズ、余白の指定 */
+.home-content p {
+    font-size: 1,2rem;
+    margin:8px 0 45px
+}
+.home-content a{
+    color: honeydew;
+}
+
+/* 見出し */
+.page-title {
+    font-size: 4rem;
+    font-family: 'Philosopher',serif ;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+/* ボタン */
+.button {
+    font-size: 1.375rem;
+    background: rgb(189, 99, 99);
+    border-radius: 5px;
+    padding: 18px 32px;
+}
+.button:hover {
+    background: firebrick;
+}
+
+/* 背景画像 */
+.big-bg{
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+#home {
+    background-image: url(../image/strawberry-3.jpg);
+    min-height: 100vh;
+}
+
+/* レスポンシブ */
+/* スマホ版 */
+@media (max-width: 600px) {
+    .page-title {
+        font-size: 2.3rem;
+    }
+
+    /* HEADER */
+    .main-nav {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    .main-nav li {
+        margin: 0 20px;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* HOME */
+    .home-content {
+        margin-top: 18%;
+    }
+
+
+}
